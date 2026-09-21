@@ -9,32 +9,27 @@ A mathematical library for Python focused on providing simple, independent, and 
 
 This project is licensed under the MIT License.
 
-
 ## Usage/Examples
 
-Example
+```python
+from probability import probability
 
-- from probability import probability
+result = probability(3, 10)
 
-- result = probability(3, 10)
+print(result)
 
--  print(result)
+Output: 0.3
 
-Output:
 
-0.3
+from combinatorics import factorial
 
-Another example
+result = factorial(5)
 
-- from combinatorics import factorial
+print(result)
 
-- result = factorial(5)
+Output: 120
+```
 
-- print(result)
-
-Output:
-
-120
 ## 🔗 Links
 
 https://github.com/natcar2000
