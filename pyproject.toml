@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mathlib"
-version = "1.0.0"
+version = "1.0.1"
 description = "A mathematical library for Python."
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = {text = "GPL-3.0-only"}
 
 authors = [
     {name = "Natanael Rodrigues"}
@@ -24,7 +24,7 @@ keywords = [
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.10",
@@ -33,13 +33,5 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
 ]
 
-[tool.setuptools]
-py-modules = [
-    "combinatorics",
-    "function",
-    "plan_geometry",
-    "spatial_geometry",
-    "analytic_geometry",
-    "probability",
-    "statistic"
-]
+[tool.setuptools.packages.find]
+include = ["mathlib*"]
