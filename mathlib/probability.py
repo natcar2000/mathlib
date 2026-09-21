@@ -38,6 +38,6 @@ def conditional_probability(joint_probability, condition_probability):
         raise ValueError("Condition probability must be greater than zero.")
 
     if joint_probability > condition_probability:
-        raise ValueError("Joint probability must be smaller of or equal to condition probability.")
+        raise ValueError("Joint probability must be smaller than or equal to condition probability.")
 
     return joint_probability / condition_probability
