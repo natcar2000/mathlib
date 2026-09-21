@@ -30,11 +30,32 @@ def complement_probability(probability):
     return 1 - probability
 
 
-def joint_probability(probability_a, probability_b):
+def joint_probability(conditional_probability, condition_probability):
+    validate_values(conditional_probability, condition_probability)
+    validate_probability(conditional_probability, condition_probability)
+
+    if condition_probability <= 0:
+        raise ValueError("Condition probability must be greater than zero.")
+
+    return conditional_probability * condition_probability
+
+
+def independent_joint_probability(probability_a, probability_b):
     validate_values(probability_a, probability_b)
     validate_probability(probability_a, probability_b)
     
     return probability_a * probability_b
+
+
+def union_probability(probability_a, probability_b, joint_probability):
+    validate_values(probability_a, probability_b)
+    validate_probability(probability_a, probability_b)
+    
+    if joint_probability > probability_a or joint_probability > probability_b:
+        raise ValueError(
+            "Joint probability must be smaller than or equal to both probabilities.")
+            
+    return (probability_a + probability_b) - joint_probability
 
 
 def conditional_probability(joint_probability, condition_probability):
