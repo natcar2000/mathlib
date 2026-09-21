@@ -5,9 +5,6 @@ A mathematical library for Python focused on providing simple, independent, and 
 ## Authors
 
 - Natanael Rodrigues
-## License
-
-This project is licensed under the MIT License.
 
 ## Usage/Examples
 
