@@ -30,6 +30,13 @@ def complement_probability(probability):
     return 1 - probability
 
 
+def joint_probability(probability_a, probability_b):
+    validate_values(probability_a, probability_b)
+    validate_probability(probability_a, probability_b)
+    
+    return probability_a * probability_b
+
+
 def conditional_probability(joint_probability, condition_probability):
     validate_values(joint_probability, condition_probability)
     validate_probability(joint_probability, condition_probability)
