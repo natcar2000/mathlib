@@ -48,12 +48,11 @@ def independent_joint_probability(probability_a, probability_b):
 
 
 def union_probability(probability_a, probability_b, joint_probability):
-    validate_values(probability_a, probability_b)
-    validate_probability(probability_a, probability_b)
+    validate_values(probability_a, probability_b, joint_probability)
+    validate_probability(probability_a, probability_b, joint_probability)
     
     if joint_probability > probability_a or joint_probability > probability_b:
-        raise ValueError(
-            "Joint probability must be smaller than or equal to both probabilities.")
+        raise ValueError("Joint probability must be smaller than or equal to both probabilities.")
             
     return (probability_a + probability_b) - joint_probability
 
