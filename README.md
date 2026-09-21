@@ -9,18 +9,18 @@ A mathematical library for Python focused on providing simple, independent, and 
 ## Usage/Examples
 
 ```python
-from probability import probability
+from mathlib import probability
 
-result = probability(3, 10)
+result = probability.probability(3, 10)
 
 print(result)
 
 Output: 0.3
 
 
-from combinatorics import factorial
+from mathlib import combinatorics
 
-result = factorial(5)
+result = combinstorics.factorial(5)
 
 print(result)
 
