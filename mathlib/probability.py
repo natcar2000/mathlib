@@ -18,7 +18,7 @@ def probability(favorable_cases, possible_cases):
         raise ValueError("Quantity of possible cases must be greater than zero.")
 
     if favorable_cases > possible_cases:
-        raise ValueError("Quantity of favorable cases must be smaller of or equal to possible cases.")
+        raise ValueError("Quantity of favorable cases must be smaller than or equal to possible cases.")
 
     return favorable_cases / possible_cases
 
@@ -33,9 +33,6 @@ def complement_probability(probability):
 def conditional_probability(joint_probability, condition_probability):
     validate_values(joint_probability, condition_probability)
     validate_probability(joint_probability, condition_probability)
-
-    if joint_probability < 0:
-        raise ValueError("Joint probability must be at least zero.")
 
     if condition_probability <= 0:
         raise ValueError("Condition probability must be greater than zero.")
