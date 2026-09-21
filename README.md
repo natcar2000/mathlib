@@ -20,7 +20,7 @@ Output: 0.3
 
 from mathlib import combinatorics
 
-result = combinstorics.factorial(5)
+result = combinatorics.factorial(5)
 
 print(result)
 
