@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "advancedmath"
+name = "mathlib"
 version = "1.0.0"
 description = "A mathematical library for Python."
 readme = "README.md"
@@ -40,5 +40,6 @@ py-modules = [
     "plan_geometry",
     "spatial_geometry",
     "analytic_geometry",
-    "probability"
+    "probability",
+    "statistic"
 ]
