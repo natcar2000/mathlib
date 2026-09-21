@@ -1,3 +1,12 @@
+from function import validate_values
+
+
+def validate_probability(*values):
+    for value in values:
+        if not 0 <= value <= 1:
+            raise ValueError("Probability must be between zero and one.")
+            
+
 def probability(favorable_cases, possible_cases):
     if type(favorable_cases) != int or type(possible_cases) != int:
         raise TypeError("Parameters must have integer values.")
@@ -15,14 +24,23 @@ def probability(favorable_cases, possible_cases):
 
 
 def complement_probability(probability):
-    if type(probability) not in (int, float):
-        raise TypeError("Probability must have a numeric value.")
+    validate_values(probability)
+    validate_probability(probability)
     
-    if not 0 <= probability <= 1:
-        raise ValueError("Probability must be between zero and one.")
-
     return 1 - probability
 
 
 def conditional_probability(joint_probability, condition_probability):
-    if type(joint_probability) not in 
+    validate_values(joint_probability, condition_probability)
+    validate_probability(joint_probability, condition_probability)
+
+    if joint_probability < 0:
+        raise ValueError("Joint probability must be at least zero.")
+
+    if condition_probability <= 0:
+        raise ValueError("Condition probability must be greater than zero.")
+
+    if joint_probability > condition_probability:
+        raise ValueError("Joint probability must be smaller of or equal to condition probability.")
+
+    return joint_probability / condition_probability
